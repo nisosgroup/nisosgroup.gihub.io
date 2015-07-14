@@ -1,0 +1,758 @@
+// Responsive
+@mixin respond-to($media) {
+    @if $media == ltPhone {
+        @media only screen and (min-width: 401px) { @content; }
+    }
+    @else if $media == phablet {
+        @media only screen and (min-width: 550px) { @content; }
+    }
+    @else if $media == tablet {
+        @media only screen and (min-width: 768px) { @content; }
+    }
+    @else if $media == desktop {
+        @media only screen and (min-width: 1025px) { @content; }
+    }
+    @else if $media == desktopHD {
+        @media only screen and (min-width: 1200px) { @content; }
+    }
+}
+
+// Color
+@mixin color-transition($timer) {
+    transition: color $timer ease-in-out;
+    -webkit-transition: color $timer ease-in-out;
+}
+
+// Fonts
+$sansSerifed: "PT Sans", sans-serif;
+$sansTitle: "PT Sans Narrow", sans-serif;
+
+// Colors
+$blue: rgb(71,150,255);
+$orange: #FB920C;
+$darkTeal: #07393c;
+$sand: #d2c057;
+$navBlueTrans: rgba(29,42,64,.65);
+$navBlue: rgba(29,42,64,.95);
+$navBlueSolid: rgb(29,42,64);
+$navBlueDark: rgb(0,5,27);
+$offYellow: rgb(255,221,23);
+$brown: #564535;
+
+
+// Styles
+nav {
+    transform: translateY(-45px);
+    font-family: $sansTitle;
+    font-size: 1.6rem;
+    height: 45px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: $navBlueSolid;
+    z-index: 500;
+    position: fixed;
+    top: 0px;
+    .pad-left {
+        padding-left: 15px;
+        @include respond-to(ltPhone) {
+            padding-left: 30px;
+        }
+    }
+    .pad-right {
+        padding-right: 15px;
+        @include respond-to(ltPhone) {
+            padding-right: 30px;
+        }
+    }
+    .contact-trigger{
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    .contact-trigger-contain {
+        background-color: $navBlueSolid;
+        z-index: 500;
+        position: relative;
+    }
+    .small-logo {
+        display: none;
+        @include respond-to(tablet) {
+            cursor: pointer;
+            display: inline-block;
+            width: 69px;
+            height: 30px;
+            background: url('../images/nisos-logo-white-small.png') no-repeat;
+            background-size: 69px 30px;
+        }
+    }
+    #contact-drop-bg, #contact-drop{
+        opacity: 0;
+        position: absolute;
+        top: 35px;
+        height: 50px;
+        width: 190px;
+        margin-left: -80px;
+        text-align: center;
+        padding: 10px;
+        z-index: -200;
+        font-family: $sansSerifed;
+    }
+    #contact-drop-bg {
+        background-color: rgba(255,255,255,0.9);
+    }
+    #contact-drop {
+        color: black;
+        a, a:visited {
+            text-transform: capitalize;
+            color: black;
+            text-decoration: none;
+        }
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+    li {
+        margin-top: 10px;
+        display:inline;
+        float: left;
+    }
+    li a {
+        display: block;
+        //padding-right: 20px;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include respond-to(ltPhone) {
+            //padding-right: 30px;
+        }
+        a:hover {
+            color: white;
+        }
+    }
+    #twitterstream {
+        display: none;
+        float: right;
+        cursor: pointer;
+        margin: 10px 10px 0px 0px;
+        @include respond-to(desktop) {
+            display: block;
+        }
+    }
+}
+#twitterstream-holder-bg {
+    display: none;
+    @include respond-to(desktop) {
+        display: block;
+        z-index: 999;
+        height: 310px;
+        width: 210px;
+        position: fixed;
+        top: 45px;
+        right: 0;
+        margin-right: -210px;
+        background-color: rgba(255,255,255,0.7);
+    }
+}
+#twitterstream-holder {
+    display: none;
+    @include respond-to(desktop) {
+        display: block;
+        position: fixed;
+        top: 50px;
+        right: 10px;
+        height: 300px;
+        width: 190px;
+        margin-right: -210px;
+        z-index: 1000;
+    }
+}
+
+header {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/splash-bg-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: auto 100vh;
+    background-attachment: fixed;
+    overflow: hidden;
+    @include respond-to(desktop) {
+        background-image: none;
+    }
+    #splash-bg {
+        display: none;
+        @include respond-to(desktop) {
+            display: block;
+            background: url('../images/splash-bg.jpg') no-repeat center center;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+    #birds-back {
+        display: none;
+        @include respond-to(desktop) {
+            display: block;
+            background: url('../images/birds-back.png') no-repeat center center;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+    #tower {
+        display: none;
+        @include respond-to(desktop) {
+            display: block;
+            background: url('../images/tower.png') no-repeat center center;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+    #birds-front {
+        display: none;
+        @include respond-to(desktop) {
+            display: block;
+            background: url('../images/birds-front.png') no-repeat center center;
+            background-size: cover;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+    #blue-bg {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        background-color: rgba(255,255,255,1);
+        #logo-svg-hold {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            opacity: 0;
+            margin-left: -150px;
+            margin-top: -66px;
+            width: 300px;
+            height: 132px;
+            @include respond-to(tablet) {
+                margin-left: -256px;
+                margin-top: -112px;
+                width: 512px;
+                height: 224px;
+            }
+            @include respond-to(desktop) {
+                margin-left: -512px;
+                margin-top: -224px;
+                width: 1024px;
+                height: 448px;
+            }
+            #logo-svg {
+                width: 300px;
+                height: 132px;
+                @include respond-to(tablet) {
+                    width: 512px;
+                    height: 224px;
+                }
+                @include respond-to(desktop) {
+                    width: 1024px;
+                    height: 448px;
+                }
+            }
+        }
+        #slogan {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            width: 300px;
+            height: 15px;
+            margin-left: -150px;
+            @include respond-to(tablet) {
+                width: 600px;
+                height: 30px;
+                margin-left: -300px;
+            }
+            @include respond-to(desktop) {
+                width: 800px;
+                height: 40px;
+                margin-left: -400px;
+            }
+            #slogan-svg {
+                width: 300px;
+                height: 15px;
+                @include respond-to(tablet) {
+                    width: 600px;
+                    height: 30px;
+                }
+                @include respond-to(desktop) {
+                    width: 800px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+#problem {
+    position: relative;
+    background-color: $navBlueSolid;
+    z-index: 3;
+    display: block;
+    overflow: hidden;
+    #slogan-2-1 {
+        height: 38px;
+        width: 300px;
+        position: relative;
+        margin: 0px auto;
+        padding-top: 70px;
+        @include respond-to(tablet) {
+            width: 600px;
+            height: 75px;
+            padding-top: 70px;
+        }
+        @include respond-to(desktop) {
+            padding-top: 40px;
+            width: 800px;
+            height: 100px;
+        }
+        #slogan-2-1-svg {
+            width: 300px;
+            position: absolute;
+            bottom: 0;
+            @include respond-to(tablet) {
+                width: 600px;
+            }
+            @include respond-to(desktop) {
+                width: 800px;
+            }
+        }
+    }
+    #graph {
+        position: relative;
+        margin: 0px auto;
+        width: 300px;
+        height: 300px;
+        @include respond-to(tablet) {
+            margin: 0px auto;
+            width: 600px;
+            height: 600px;
+        }
+        @include respond-to(desktop) {
+            float: left;
+            margin: 0px auto 20px;
+            padding-top: 20px;
+            width: 400px;
+            height: 400px;
+        }
+        #graph-axes-svg {
+            position: absolute;
+            bottom: 0;
+            width: 300px;
+            height: 300px;
+            @include respond-to(tablet) {
+                width: 600px;
+                height: 600px;
+            }
+            @include respond-to(desktop) {
+                width: 400px;
+                height: 400px;
+            }
+        }
+        #graph-the-rest-svg {
+            position: absolute;
+            bottom: 0;
+            width: 300px;
+            height: 300px;
+            @include respond-to(tablet) {
+                width: 600px;
+                height: 600px;
+            }
+            @include respond-to(desktop) {
+                width: 400px;
+                height: 400px;
+            }
+            #graph-shading, .graph-labels, #graph-nisos {
+                opacity: 0;
+            }
+        }
+    }
+    #mission-content {
+        width: 260px;
+        font-family: $sansSerifed;
+        font-size: 1.6rem;
+        color: white;
+        margin: 20px auto;
+        text-align: center;
+        @include respond-to(tablet) {
+            margin: 40px auto;
+            text-align: center;
+            width: 600px;
+            font-size: 1.8rem;
+        }
+        @include respond-to(desktop) {
+            text-align: left;
+            float:right;
+            width: 450px;
+            font-size: 2rem;
+            margin: 80px 0px;
+        }
+        .adapt-lose {
+            display: block;
+            opacity: 0;
+            position: relative;
+            margin-bottom: 20px;
+            @include respond-to(desktop) {
+                margin-bottom: 20px;
+            }
+            .adapt-lose-strong {
+                font-weight: 700;
+                font-family: $sansTitle;
+                text-transform: uppercase;
+                //color: $blue;
+            }
+        }
+    }
+    #gap {
+        opacity: 0;
+        display:block;
+        margin-bottom: 40px;
+        clear:both;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        @include respond-to(tablet) {
+            font-size: 2rem;
+        }
+        @include respond-to(desktop) {
+            font-size: 2.4rem;
+        }
+
+    }
+}
+#solutions {
+    position: relative;
+    background-color: white;
+    color: black;
+    z-index: 3;
+    display: block;
+    font-family: $sansSerifed;
+    font-size: 1.6rem;
+    @include respond-to(tablet) {
+        font-size: 2rem;
+    }
+    @include respond-to(desktop) {
+        font-size: 2.5rem;
+    }
+    #solutions-splash {
+        background: url('../images/hackers-dark-mobile.jpg') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        display: block;
+        @include respond-to(desktop) {
+            height: 50vh;
+            background: url('../images/hackers-dark.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        img {
+            display: block;
+            width: 100%;
+            @include respond-to(desktop) {
+                display: none;
+            }
+        }
+    }
+    #slogan-3 {
+        height: 21px;
+        width: 280px;
+        position: relative;
+        margin: 0px auto 60px;
+        padding: 0px 0px 0px 0px;
+        @include respond-to(tablet) {
+            padding-top: 30px;
+            height: 45px;
+            width: 600px;
+        }
+        @include respond-to(desktop) {
+            padding-top: 40px;
+            height: 60px;
+            width: 800px;
+        }
+        #slogan-3-svg {
+            width: 280px;
+            position: absolute;
+            @include respond-to(tablet) {
+                width: 600px;
+            }
+            @include respond-to(desktop) {
+                width: 800px;
+            }
+        }
+    }
+    #approach-text {
+        margin-bottom: 0px;
+        @include respond-to(tablet) {
+            margin-bottom: 20px;
+        }
+        @include respond-to(desktop) {
+            margin-bottom: 20px;
+        }
+    }
+    .list-bullet {
+        opacity: 0;
+        .glyph {
+            text-align: center;
+            margin-top: 20px;
+        }
+        h5 {
+            text-transform: uppercase;
+            text-align: center;
+            color: rgba(0,0,0,.3);
+            @include color-transition(.2s)
+        }
+        p {
+            font-size: 1.7rem;
+        }
+        .sub-header {
+            font-weight: 700;
+            text-align: center;
+            display: block;
+            @include respond-to(tablet) {
+                text-align: left;
+            }
+            @include respond-to(desktop) {
+                text-align: left;
+            }
+        }
+    }
+    .lb-left {
+        padding-right: 0px;
+        @include respond-to(tablet) {
+            padding-right: 25px;
+        }
+        @include respond-to(desktop) {
+            padding-right: 25px;
+        }
+    }
+    .lb-right {
+        padding-left: 0px;
+        @include respond-to(tablet) {
+            padding-right: 25px;
+        }
+        @include respond-to(desktop) {
+            padding-right: 25px;
+        }
+    }
+    .spacer {
+        width: 100%;
+        height: 40px;
+        @include respond-to(tablet) {
+            display: 80px;
+        }
+        @include respond-to(desktop) {
+            display: block;
+            height: 80px;
+        }
+    }
+    .spacer-remove {
+        display: none;
+        @include respond-to(tablet) {
+            display: block;
+        }
+        @include respond-to(desktop) {
+            display: block;
+        }
+    }
+}
+#about {
+    position: relative;
+    background-color: #d1d0c9;
+    height: 1010px;
+    width: 100%;
+    z-index: 3;
+    font-size: 1.6rem;
+    @include respond-to(tablet) {
+        background: url('../images/falcon.jpg') no-repeat center center;
+        background-size: cover;
+        font-size: 2rem;
+        height: 1000px
+    }
+    @include respond-to(desktop) {
+        background: url('../images/falcon.jpg') no-repeat center center;
+        background-size: cover;
+        font-size: 2.5rem;
+        height: 1000px;
+    }
+    #about-us {
+        height: 23px;
+        width: 300px;
+        position: relative;
+        margin: 0px auto 20px;
+        padding-top: 70px;
+        @include respond-to(tablet) {
+            height: 45px;
+            width: 600px;
+            padding-top: 40px;
+        }
+        @include respond-to(desktop) {
+            height: 60px;
+            width: 800px;
+            padding-top: 40px;
+        }
+        #about-us-svg {
+            width: 300px;
+            position: absolute;
+            bottom: 0;
+            @include respond-to(tablet) {
+                width: 600px;
+            }
+            @include respond-to(desktop) {
+                width: 800px;
+            }
+        }
+    }
+    .skill-holder{
+        opacity: 0;
+        overflow: hidden;
+        width: 260px;
+        margin: 0px auto;
+        @include respond-to(tablet) {
+            width: 400px;
+            margin: 0px;
+        }
+        @include respond-to(desktop) {
+            width: 600px;
+            height: 290px;
+            margin: 0px;
+        }
+        .tab-content {
+            font-size: 1.5rem;
+            @include respond-to(tablet) {
+                font-size: 1.6rem;
+            }
+            @include respond-to(desktop) {
+                font-size: 1.8rem;
+            }
+            div {
+                width: 80%;
+            }
+        }
+    }
+    .tabs {
+        width: 260px;
+        margin: 30px auto 0px auto;
+        text-align: center;
+        cursor:pointer;
+        @include respond-to(tablet) {
+            width: 400px;
+            margin: 30px 0px 0px 0px;
+        }
+        @include respond-to(desktop) {
+            width: 600px;
+            margin: 30px 0px 0px 0px;
+        }
+        li {
+            text-transform: uppercase;
+            font-family: $sansTitle;
+            list-style-type: none;
+            display: inline-block;
+            padding: 0px 10px 0px 10px;
+            font-size: 1.5rem;
+            @include respond-to(tablet) {
+                font-size: 1.7rem;
+            }
+            @include respond-to(desktop) {
+                font-size: 1.9rem;
+            }
+        }
+        li:first-child {
+            padding: 0px 10px 0px 0px;
+        }
+    }
+    #divider {
+        height: 10px;
+        width: 300px;
+        margin: 0px auto 10px auto;
+        position: relative;
+        @include respond-to(tablet) {
+            width: 400px;
+            margin: 0px 0px 10px 0px;
+        }
+        @include respond-to(desktop) {
+            width: 600px;
+            margin: 0px 0px 10px 0px;
+        }
+        #divider-line {
+            position: absolute;
+            top: 0;
+            width: 300px;
+            @include respond-to(tablet) {
+                width: 400px;
+            }
+            @include respond-to(desktop) {
+                width: 600px;
+            }
+        }
+    }  
+    .location {
+        width: 200px;
+        text-align: center;
+        position: relative;
+        margin: 15px auto;
+        display: block;
+        padding-top: 15px;
+        font-family: $sansTitle;
+        color: black;
+        font-size: 2rem;
+    }
+
+    .social {
+        width: 100%;
+        text-align: center;
+        svg{
+            margin: 0px 10px;
+            cursor: pointer;
+        }
+    } 
+    #copyright {
+        width: 100%;
+        text-align: center;
+        font-family: $sansTitle;
+        font-size: 1.2rem;
+    }
+}
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}

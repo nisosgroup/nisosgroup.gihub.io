@@ -1,0 +1,644 @@
+nav {
+  transform: translateY(-45px);
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.6rem;
+  height: 45px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  background-color: #1d2a40;
+  z-index: 500;
+  position: fixed;
+  top: 0px; }
+  nav .pad-left {
+    padding-left: 15px; }
+    @media only screen and (min-width: 401px) {
+      nav .pad-left {
+        padding-left: 30px; } }
+  nav .pad-right {
+    padding-right: 15px; }
+    @media only screen and (min-width: 401px) {
+      nav .pad-right {
+        padding-right: 30px; } }
+  nav .contact-trigger {
+    cursor: pointer;
+    text-transform: uppercase; }
+  nav .contact-trigger-contain {
+    background-color: #1d2a40;
+    z-index: 500;
+    position: relative; }
+  nav .small-logo {
+    display: none; }
+    @media only screen and (min-width: 768px) {
+      nav .small-logo {
+        cursor: pointer;
+        display: inline-block;
+        width: 69px;
+        height: 30px;
+        background: url("../images/nisos-logo-white-small.png") no-repeat;
+        background-size: 69px 30px; } }
+  nav #contact-drop-bg, nav #contact-drop {
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    height: 50px;
+    width: 190px;
+    margin-left: -80px;
+    text-align: center;
+    padding: 10px;
+    z-index: -200;
+    font-family: "PT Sans", sans-serif; }
+  nav #contact-drop-bg {
+    background-color: rgba(255, 255, 255, 0.9); }
+  nav #contact-drop {
+    color: black; }
+    nav #contact-drop a, nav #contact-drop a:visited {
+      text-transform: capitalize;
+      color: black;
+      text-decoration: none; }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+  nav li {
+    margin-top: 10px;
+    display: inline;
+    float: left; }
+  nav li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase; }
+    nav li a a:hover {
+      color: white; }
+  nav #twitterstream {
+    display: none;
+    float: right;
+    cursor: pointer;
+    margin: 10px 10px 0px 0px; }
+    @media only screen and (min-width: 1025px) {
+      nav #twitterstream {
+        display: block; } }
+
+#twitterstream-holder-bg {
+  display: none; }
+  @media only screen and (min-width: 1025px) {
+    #twitterstream-holder-bg {
+      display: block;
+      z-index: 999;
+      height: 310px;
+      width: 210px;
+      position: fixed;
+      top: 45px;
+      right: 0;
+      margin-right: -210px;
+      background-color: rgba(255, 255, 255, 0.7); } }
+
+#twitterstream-holder {
+  display: none; }
+  @media only screen and (min-width: 1025px) {
+    #twitterstream-holder {
+      display: block;
+      position: fixed;
+      top: 50px;
+      right: 10px;
+      height: 300px;
+      width: 190px;
+      margin-right: -210px;
+      z-index: 1000; } }
+
+header {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/splash-bg-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto 100vh;
+  background-attachment: fixed;
+  overflow: hidden; }
+  @media only screen and (min-width: 1025px) {
+    header {
+      background-image: none; } }
+  header #splash-bg {
+    display: none; }
+    @media only screen and (min-width: 1025px) {
+      header #splash-bg {
+        display: block;
+        background: url("../images/splash-bg.jpg") no-repeat center center;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; } }
+  header #birds-back {
+    display: none; }
+    @media only screen and (min-width: 1025px) {
+      header #birds-back {
+        display: block;
+        background: url("../images/birds-back.png") no-repeat center center;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; } }
+  header #tower {
+    display: none; }
+    @media only screen and (min-width: 1025px) {
+      header #tower {
+        display: block;
+        background: url("../images/tower.png") no-repeat center center;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; } }
+  header #birds-front {
+    display: none; }
+    @media only screen and (min-width: 1025px) {
+      header #birds-front {
+        display: block;
+        background: url("../images/birds-front.png") no-repeat center center;
+        background-size: cover;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0; } }
+  header #blue-bg {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: white; }
+    header #blue-bg #logo-svg-hold {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      opacity: 0;
+      margin-left: -150px;
+      margin-top: -66px;
+      width: 300px;
+      height: 132px; }
+      @media only screen and (min-width: 768px) {
+        header #blue-bg #logo-svg-hold {
+          margin-left: -256px;
+          margin-top: -112px;
+          width: 512px;
+          height: 224px; } }
+      @media only screen and (min-width: 1025px) {
+        header #blue-bg #logo-svg-hold {
+          margin-left: -512px;
+          margin-top: -224px;
+          width: 1024px;
+          height: 448px; } }
+      header #blue-bg #logo-svg-hold #logo-svg {
+        width: 300px;
+        height: 132px; }
+        @media only screen and (min-width: 768px) {
+          header #blue-bg #logo-svg-hold #logo-svg {
+            width: 512px;
+            height: 224px; } }
+        @media only screen and (min-width: 1025px) {
+          header #blue-bg #logo-svg-hold #logo-svg {
+            width: 1024px;
+            height: 448px; } }
+    header #blue-bg #slogan {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      width: 300px;
+      height: 15px;
+      margin-left: -150px; }
+      @media only screen and (min-width: 768px) {
+        header #blue-bg #slogan {
+          width: 600px;
+          height: 30px;
+          margin-left: -300px; } }
+      @media only screen and (min-width: 1025px) {
+        header #blue-bg #slogan {
+          width: 800px;
+          height: 40px;
+          margin-left: -400px; } }
+      header #blue-bg #slogan #slogan-svg {
+        width: 300px;
+        height: 15px; }
+        @media only screen and (min-width: 768px) {
+          header #blue-bg #slogan #slogan-svg {
+            width: 600px;
+            height: 30px; } }
+        @media only screen and (min-width: 1025px) {
+          header #blue-bg #slogan #slogan-svg {
+            width: 800px;
+            height: 40px; } }
+
+#problem {
+  position: relative;
+  background-color: #1d2a40;
+  z-index: 3;
+  display: block;
+  overflow: hidden; }
+  #problem #slogan-2-1 {
+    height: 38px;
+    width: 300px;
+    position: relative;
+    margin: 0px auto;
+    padding-top: 70px; }
+    @media only screen and (min-width: 768px) {
+      #problem #slogan-2-1 {
+        width: 600px;
+        height: 75px;
+        padding-top: 70px; } }
+    @media only screen and (min-width: 1025px) {
+      #problem #slogan-2-1 {
+        padding-top: 40px;
+        width: 800px;
+        height: 100px; } }
+    #problem #slogan-2-1 #slogan-2-1-svg {
+      width: 300px;
+      position: absolute;
+      bottom: 0; }
+      @media only screen and (min-width: 768px) {
+        #problem #slogan-2-1 #slogan-2-1-svg {
+          width: 600px; } }
+      @media only screen and (min-width: 1025px) {
+        #problem #slogan-2-1 #slogan-2-1-svg {
+          width: 800px; } }
+  #problem #graph {
+    position: relative;
+    margin: 0px auto;
+    width: 300px;
+    height: 300px; }
+    @media only screen and (min-width: 768px) {
+      #problem #graph {
+        margin: 0px auto;
+        width: 600px;
+        height: 600px; } }
+    @media only screen and (min-width: 1025px) {
+      #problem #graph {
+        float: left;
+        margin: 0px auto 20px;
+        padding-top: 20px;
+        width: 400px;
+        height: 400px; } }
+    #problem #graph #graph-axes-svg {
+      position: absolute;
+      bottom: 0;
+      width: 300px;
+      height: 300px; }
+      @media only screen and (min-width: 768px) {
+        #problem #graph #graph-axes-svg {
+          width: 600px;
+          height: 600px; } }
+      @media only screen and (min-width: 1025px) {
+        #problem #graph #graph-axes-svg {
+          width: 400px;
+          height: 400px; } }
+    #problem #graph #graph-the-rest-svg {
+      position: absolute;
+      bottom: 0;
+      width: 300px;
+      height: 300px; }
+      @media only screen and (min-width: 768px) {
+        #problem #graph #graph-the-rest-svg {
+          width: 600px;
+          height: 600px; } }
+      @media only screen and (min-width: 1025px) {
+        #problem #graph #graph-the-rest-svg {
+          width: 400px;
+          height: 400px; } }
+      #problem #graph #graph-the-rest-svg #graph-shading, #problem #graph #graph-the-rest-svg .graph-labels, #problem #graph #graph-the-rest-svg #graph-nisos {
+        opacity: 0; }
+  #problem #mission-content {
+    width: 260px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 1.6rem;
+    color: white;
+    margin: 20px auto;
+    text-align: center; }
+    @media only screen and (min-width: 768px) {
+      #problem #mission-content {
+        margin: 40px auto;
+        text-align: center;
+        width: 600px;
+        font-size: 1.8rem; } }
+    @media only screen and (min-width: 1025px) {
+      #problem #mission-content {
+        text-align: left;
+        float: right;
+        width: 450px;
+        font-size: 2rem;
+        margin: 80px 0px; } }
+    #problem #mission-content .adapt-lose {
+      display: block;
+      opacity: 0;
+      position: relative;
+      margin-bottom: 20px; }
+      @media only screen and (min-width: 1025px) {
+        #problem #mission-content .adapt-lose {
+          margin-bottom: 20px; } }
+      #problem #mission-content .adapt-lose .adapt-lose-strong {
+        font-weight: 700;
+        font-family: "PT Sans Narrow", sans-serif;
+        text-transform: uppercase; }
+  #problem #gap {
+    opacity: 0;
+    display: block;
+    margin-bottom: 40px;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase; }
+    @media only screen and (min-width: 768px) {
+      #problem #gap {
+        font-size: 2rem; } }
+    @media only screen and (min-width: 1025px) {
+      #problem #gap {
+        font-size: 2.4rem; } }
+
+#solutions {
+  position: relative;
+  background-color: white;
+  color: black;
+  z-index: 3;
+  display: block;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.6rem; }
+  @media only screen and (min-width: 768px) {
+    #solutions {
+      font-size: 2rem; } }
+  @media only screen and (min-width: 1025px) {
+    #solutions {
+      font-size: 2.5rem; } }
+  #solutions #solutions-splash {
+    background: url("../images/hackers-dark-mobile.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    display: block; }
+    @media only screen and (min-width: 1025px) {
+      #solutions #solutions-splash {
+        height: 50vh;
+        background: url("../images/hackers-dark.jpg") no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed; } }
+    #solutions #solutions-splash img {
+      display: block;
+      width: 100%; }
+      @media only screen and (min-width: 1025px) {
+        #solutions #solutions-splash img {
+          display: none; } }
+  #solutions #slogan-3 {
+    height: 21px;
+    width: 280px;
+    position: relative;
+    margin: 0px auto 60px;
+    padding: 0px 0px 0px 0px; }
+    @media only screen and (min-width: 768px) {
+      #solutions #slogan-3 {
+        padding-top: 30px;
+        height: 45px;
+        width: 600px; } }
+    @media only screen and (min-width: 1025px) {
+      #solutions #slogan-3 {
+        padding-top: 40px;
+        height: 60px;
+        width: 800px; } }
+    #solutions #slogan-3 #slogan-3-svg {
+      width: 280px;
+      position: absolute; }
+      @media only screen and (min-width: 768px) {
+        #solutions #slogan-3 #slogan-3-svg {
+          width: 600px; } }
+      @media only screen and (min-width: 1025px) {
+        #solutions #slogan-3 #slogan-3-svg {
+          width: 800px; } }
+  #solutions #approach-text {
+    margin-bottom: 0px; }
+    @media only screen and (min-width: 768px) {
+      #solutions #approach-text {
+        margin-bottom: 20px; } }
+    @media only screen and (min-width: 1025px) {
+      #solutions #approach-text {
+        margin-bottom: 20px; } }
+  #solutions .list-bullet {
+    opacity: 0; }
+    #solutions .list-bullet .glyph {
+      text-align: center;
+      margin-top: 20px; }
+    #solutions .list-bullet h5 {
+      text-transform: uppercase;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.3);
+      transition: color 0.2s ease-in-out;
+      -webkit-transition: color 0.2s ease-in-out; }
+    #solutions .list-bullet p {
+      font-size: 1.7rem; }
+    #solutions .list-bullet .sub-header {
+      font-weight: 700;
+      text-align: center;
+      display: block; }
+      @media only screen and (min-width: 768px) {
+        #solutions .list-bullet .sub-header {
+          text-align: left; } }
+      @media only screen and (min-width: 1025px) {
+        #solutions .list-bullet .sub-header {
+          text-align: left; } }
+  #solutions .lb-left {
+    padding-right: 0px; }
+    @media only screen and (min-width: 768px) {
+      #solutions .lb-left {
+        padding-right: 25px; } }
+    @media only screen and (min-width: 1025px) {
+      #solutions .lb-left {
+        padding-right: 25px; } }
+  #solutions .lb-right {
+    padding-left: 0px; }
+    @media only screen and (min-width: 768px) {
+      #solutions .lb-right {
+        padding-right: 25px; } }
+    @media only screen and (min-width: 1025px) {
+      #solutions .lb-right {
+        padding-right: 25px; } }
+  #solutions .spacer {
+    width: 100%;
+    height: 40px; }
+    @media only screen and (min-width: 768px) {
+      #solutions .spacer {
+        display: 80px; } }
+    @media only screen and (min-width: 1025px) {
+      #solutions .spacer {
+        display: block;
+        height: 80px; } }
+  #solutions .spacer-remove {
+    display: none; }
+    @media only screen and (min-width: 768px) {
+      #solutions .spacer-remove {
+        display: block; } }
+    @media only screen and (min-width: 1025px) {
+      #solutions .spacer-remove {
+        display: block; } }
+
+#about {
+  position: relative;
+  background-color: #d1d0c9;
+  height: 1010px;
+  width: 100%;
+  z-index: 3;
+  font-size: 1.6rem; }
+  @media only screen and (min-width: 768px) {
+    #about {
+      background: url("../images/falcon.jpg") no-repeat center center;
+      background-size: cover;
+      font-size: 2rem;
+      height: 1010px; } }
+  @media only screen and (min-width: 1025px) {
+    #about {
+      background: url("../images/falcon.jpg") no-repeat center center;
+      background-size: cover;
+      font-size: 2.5rem;
+      height: 1000px; } }
+  #about #about-us {
+    height: 23px;
+    width: 300px;
+    position: relative;
+    margin: 0px auto 20px;
+    padding-top: 70px; }
+    @media only screen and (min-width: 768px) {
+      #about #about-us {
+        height: 45px;
+        width: 600px;
+        padding-top: 40px; } }
+    @media only screen and (min-width: 1025px) {
+      #about #about-us {
+        height: 60px;
+        width: 800px;
+        padding-top: 40px; } }
+    #about #about-us #about-us-svg {
+      width: 300px;
+      position: absolute;
+      bottom: 0; }
+      @media only screen and (min-width: 768px) {
+        #about #about-us #about-us-svg {
+          width: 600px; } }
+      @media only screen and (min-width: 1025px) {
+        #about #about-us #about-us-svg {
+          width: 800px; } }
+  #about .skill-holder {
+    opacity: 0;
+    overflow: hidden;
+    width: 260px;
+    margin: 0px auto; }
+    @media only screen and (min-width: 768px) {
+      #about .skill-holder {
+        width: 400px;
+        margin: 0px; } }
+    @media only screen and (min-width: 1025px) {
+      #about .skill-holder {
+        width: 600px;
+        height: 290px;
+        margin: 0px; } }
+    #about .skill-holder .tab-content {
+      font-size: 1.5rem; }
+      @media only screen and (min-width: 768px) {
+        #about .skill-holder .tab-content {
+          font-size: 1.6rem; } }
+      @media only screen and (min-width: 1025px) {
+        #about .skill-holder .tab-content {
+          font-size: 1.8rem; } }
+      #about .skill-holder .tab-content div {
+        width: 80%; }
+  #about .tabs {
+    width: 260px;
+    margin: 30px auto 0px auto;
+    text-align: center;
+    cursor: pointer; }
+    @media only screen and (min-width: 768px) {
+      #about .tabs {
+        width: 400px;
+        margin: 30px 0px 0px 0px; } }
+    @media only screen and (min-width: 1025px) {
+      #about .tabs {
+        width: 600px;
+        margin: 30px 0px 0px 0px; } }
+    #about .tabs li {
+      text-transform: uppercase;
+      font-family: "PT Sans Narrow", sans-serif;
+      list-style-type: none;
+      display: inline-block;
+      padding: 0px 10px 0px 10px;
+      font-size: 1.5rem; }
+      @media only screen and (min-width: 768px) {
+        #about .tabs li {
+          font-size: 1.7rem; } }
+      @media only screen and (min-width: 1025px) {
+        #about .tabs li {
+          font-size: 1.9rem; } }
+    #about .tabs li:first-child {
+      padding: 0px 10px 0px 0px; }
+  #about #divider {
+    height: 10px;
+    width: 300px;
+    margin: 0px auto 10px auto;
+    position: relative; }
+    @media only screen and (min-width: 768px) {
+      #about #divider {
+        width: 400px;
+        margin: 0px 0px 10px 0px; } }
+    @media only screen and (min-width: 1025px) {
+      #about #divider {
+        width: 600px;
+        margin: 0px 0px 10px 0px; } }
+    #about #divider #divider-line {
+      position: absolute;
+      top: 0;
+      width: 300px; }
+      @media only screen and (min-width: 768px) {
+        #about #divider #divider-line {
+          width: 400px; } }
+      @media only screen and (min-width: 1025px) {
+        #about #divider #divider-line {
+          width: 600px; } }
+  #about .location {
+    width: 200px;
+    text-align: center;
+    position: relative;
+    margin: 15px auto;
+    display: block;
+    padding-top: 15px;
+    font-family: "PT Sans Narrow", sans-serif;
+    color: black;
+    font-size: 2rem; }
+  #about .social {
+    width: 100%;
+    text-align: center; }
+    #about .social svg {
+      margin: 0px 10px;
+      cursor: pointer; }
+  #about #copyright {
+    width: 100%;
+    text-align: center;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 1.2rem; }
+
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative; }
+
+.swipe-wrap {
+  overflow: hidden;
+  position: relative; }
+
+.swipe-wrap > div {
+  float: left;
+  width: 100%;
+  position: relative; }

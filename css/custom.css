@@ -1,7 +1,7 @@
 nav {
   transform: translateY(-45px);
   font-family: "PT Sans Narrow", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   height: 45px;
   text-align: center;
   width: 100%;
@@ -24,7 +24,6 @@ nav {
     cursor: pointer;
     text-transform: uppercase; }
   nav .contact-trigger-contain {
-    background-color: #1d2a40;
     z-index: 500;
     position: relative; }
   nav .small-logo {
@@ -41,17 +40,25 @@ nav {
     opacity: 0;
     position: absolute;
     top: 35px;
-    height: 50px;
-    width: 190px;
+    height: 80px;
+    width: 150px;
     margin-left: -80px;
     text-align: center;
     padding: 10px;
     z-index: -200;
-    font-family: "PT Sans", sans-serif; }
+    font-family: "Gentium Book Basic", serif; }
+    @media only screen and (min-width: 768px) {
+      nav #contact-drop-bg, nav #contact-drop {
+        height: 50px;
+        width: 190px; } }
   nav #contact-drop-bg {
     background-color: rgba(255, 255, 255, 0.9); }
   nav #contact-drop {
-    color: black; }
+    color: black;
+    font-size: 1.2rem; }
+    @media only screen and (min-width: 768px) {
+      nav #contact-drop {
+        font-size: 1.6rem; } }
     nav #contact-drop a, nav #contact-drop a:visited {
       text-transform: capitalize;
       color: black;
@@ -194,10 +201,10 @@ header {
           height: 224px; } }
       @media only screen and (min-width: 1025px) {
         header #blue-bg #logo-svg-hold {
-          margin-left: -512px;
-          margin-top: -224px;
-          width: 1024px;
-          height: 448px; } }
+          margin-left: -402px;
+          margin-top: -176px;
+          width: 804px;
+          height: 352px; } }
       header #blue-bg #logo-svg-hold #logo-svg {
         width: 300px;
         height: 132px; }
@@ -207,8 +214,8 @@ header {
             height: 224px; } }
         @media only screen and (min-width: 1025px) {
           header #blue-bg #logo-svg-hold #logo-svg {
-            width: 1024px;
-            height: 448px; } }
+            width: 804px;
+            height: 352px; } }
     header #blue-bg #slogan {
       position: absolute;
       bottom: 10%;
@@ -238,377 +245,400 @@ header {
             width: 800px;
             height: 40px; } }
 
+.slogans {
+  height: 25px;
+  width: 269px;
+  position: relative;
+  margin: 20px auto; }
+  @media only screen and (min-width: 768px) {
+    .slogans {
+      width: 400px;
+      height: 38px; } }
+  @media only screen and (min-width: 1025px) {
+    .slogans {
+      width: 590px;
+      height: 55px; } }
+  .slogans .slogan-svg {
+    width: 269px;
+    position: absolute;
+    bottom: 0; }
+    @media only screen and (min-width: 768px) {
+      .slogans .slogan-svg {
+        width: 400px; } }
+    @media only screen and (min-width: 1025px) {
+      .slogans .slogan-svg {
+        width: 590px; } }
+
+.slogans-long {
+  height: 25px;
+  width: 300px;
+  position: relative;
+  margin: 20px auto; }
+  @media only screen and (min-width: 768px) {
+    .slogans-long {
+      width: 470px;
+      height: 38px; } }
+  @media only screen and (min-width: 1025px) {
+    .slogans-long {
+      width: 680px;
+      height: 55px; } }
+  .slogans-long .slogan-long-svg {
+    width: 300px;
+    position: absolute;
+    bottom: 0; }
+    @media only screen and (min-width: 768px) {
+      .slogans-long .slogan-long-svg {
+        width: 470px; } }
+    @media only screen and (min-width: 1025px) {
+      .slogans-long .slogan-long-svg {
+        width: 680px; } }
+
 #problem {
   position: relative;
   background-color: #1d2a40;
   z-index: 3;
   display: block;
-  overflow: hidden; }
-  #problem #slogan-2-1 {
-    height: 38px;
+  overflow: hidden;
+  padding-bottom: 40px; }
+  #problem #slogan-2-1-underline, #problem #slogan-2-2-underline {
+    height: 10px;
     width: 300px;
     position: relative;
-    margin: 0px auto;
-    padding-top: 70px; }
+    margin: 20px auto 40px; }
     @media only screen and (min-width: 768px) {
-      #problem #slogan-2-1 {
-        width: 600px;
-        height: 75px;
-        padding-top: 70px; } }
+      #problem #slogan-2-1-underline, #problem #slogan-2-2-underline {
+        width: 400px;
+        height: 10px; } }
     @media only screen and (min-width: 1025px) {
-      #problem #slogan-2-1 {
-        padding-top: 40px;
-        width: 800px;
-        height: 100px; } }
-    #problem #slogan-2-1 #slogan-2-1-svg {
+      #problem #slogan-2-1-underline, #problem #slogan-2-2-underline {
+        width: 500px;
+        height: 10px; } }
+    #problem #slogan-2-1-underline #slogan-2-1-underline-svg, #problem #slogan-2-1-underline #slogan-2-2-underline-svg, #problem #slogan-2-2-underline #slogan-2-1-underline-svg, #problem #slogan-2-2-underline #slogan-2-2-underline-svg {
       width: 300px;
       position: absolute;
       bottom: 0; }
       @media only screen and (min-width: 768px) {
-        #problem #slogan-2-1 #slogan-2-1-svg {
-          width: 600px; } }
+        #problem #slogan-2-1-underline #slogan-2-1-underline-svg, #problem #slogan-2-1-underline #slogan-2-2-underline-svg, #problem #slogan-2-2-underline #slogan-2-1-underline-svg, #problem #slogan-2-2-underline #slogan-2-2-underline-svg {
+          width: 400px; } }
       @media only screen and (min-width: 1025px) {
-        #problem #slogan-2-1 #slogan-2-1-svg {
-          width: 800px; } }
-  #problem #graph {
-    position: relative;
-    margin: 0px auto;
-    width: 300px;
-    height: 300px; }
-    @media only screen and (min-width: 768px) {
-      #problem #graph {
-        margin: 0px auto;
-        width: 600px;
-        height: 600px; } }
-    @media only screen and (min-width: 1025px) {
-      #problem #graph {
-        float: left;
-        margin: 0px auto 20px;
-        padding-top: 20px;
-        width: 400px;
-        height: 400px; } }
-    #problem #graph #graph-axes-svg {
-      position: absolute;
-      bottom: 0;
-      width: 300px;
-      height: 300px; }
-      @media only screen and (min-width: 768px) {
-        #problem #graph #graph-axes-svg {
-          width: 600px;
-          height: 600px; } }
-      @media only screen and (min-width: 1025px) {
-        #problem #graph #graph-axes-svg {
-          width: 400px;
-          height: 400px; } }
-    #problem #graph #graph-the-rest-svg {
-      position: absolute;
-      bottom: 0;
-      width: 300px;
-      height: 300px; }
-      @media only screen and (min-width: 768px) {
-        #problem #graph #graph-the-rest-svg {
-          width: 600px;
-          height: 600px; } }
-      @media only screen and (min-width: 1025px) {
-        #problem #graph #graph-the-rest-svg {
-          width: 400px;
-          height: 400px; } }
-      #problem #graph #graph-the-rest-svg #graph-shading, #problem #graph #graph-the-rest-svg .graph-labels, #problem #graph #graph-the-rest-svg #graph-nisos {
-        opacity: 0; }
+        #problem #slogan-2-1-underline #slogan-2-1-underline-svg, #problem #slogan-2-1-underline #slogan-2-2-underline-svg, #problem #slogan-2-2-underline #slogan-2-1-underline-svg, #problem #slogan-2-2-underline #slogan-2-2-underline-svg {
+          width: 500px; } }
   #problem #mission-content {
-    width: 260px;
-    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-family: "Gentium Book Basic", serif;
     font-size: 1.6rem;
     color: white;
-    margin: 20px auto;
+    margin: 0px auto 40px;
     text-align: center; }
     @media only screen and (min-width: 768px) {
       #problem #mission-content {
-        margin: 40px auto;
-        text-align: center;
-        width: 600px;
         font-size: 1.8rem; } }
     @media only screen and (min-width: 1025px) {
       #problem #mission-content {
-        text-align: left;
-        float: right;
-        width: 450px;
-        font-size: 2rem;
-        margin: 80px 0px; } }
-    #problem #mission-content .adapt-lose {
+        font-size: 2.5rem; } }
+    #problem #mission-content .threat-para {
+      position: relative;
       display: block;
       opacity: 0;
-      position: relative;
-      margin-bottom: 20px; }
+      margin: 0px auto 20px auto; }
       @media only screen and (min-width: 1025px) {
-        #problem #mission-content .adapt-lose {
-          margin-bottom: 20px; } }
-      #problem #mission-content .adapt-lose .adapt-lose-strong {
-        font-weight: 700;
-        font-family: "PT Sans Narrow", sans-serif;
+        #problem #mission-content .threat-para {
+          width: 960px;
+          margin: 0px auto 40px auto; } }
+      #problem #mission-content .threat-para .threat-para-strong {
+        font-weight: 400;
+        font-family: "Gentium Book Basic", serif;
         text-transform: uppercase; }
-  #problem #gap {
-    opacity: 0;
-    display: block;
-    margin-bottom: 40px;
-    clear: both;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-size: 1.8rem;
-    text-transform: uppercase; }
-    @media only screen and (min-width: 768px) {
-      #problem #gap {
-        font-size: 2rem; } }
-    @media only screen and (min-width: 1025px) {
-      #problem #gap {
-        font-size: 2.4rem; } }
 
-#solutions {
+.shoutquote {
+  width: 250px;
+  font-weight: bold;
+  text-align: center;
+  position: static;
+  z-index: 0;
+  font-size: 1.8rem;
+  opacity: 1;
+  margin: 0px auto;
+  padding: 60px 0px; }
+  @media only screen and (min-width: 1025px) {
+    .shoutquote {
+      width: 450px;
+      padding: 60px 80px;
+      font-size: 2rem; } }
+
+#raison {
   position: relative;
-  background-color: white;
-  color: black;
+  background-color: #1d2a40;
+  color: white;
   z-index: 3;
   display: block;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Gentium Book Basic", serif;
   font-size: 1.6rem; }
   @media only screen and (min-width: 768px) {
-    #solutions {
+    #raison {
       font-size: 2rem; } }
   @media only screen and (min-width: 1025px) {
-    #solutions {
+    #raison {
       font-size: 2.5rem; } }
-  #solutions #solutions-splash {
-    background: url("../images/hackers-dark-mobile.jpg") no-repeat center center;
+  #raison #raison-splash {
+    width: 100%;
+    height: 70vh;
+    display: block;
+    background: url("../images/NYC.jpg") no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    display: block; }
+    background-attachment: scroll; }
     @media only screen and (min-width: 1025px) {
-      #solutions #solutions-splash {
-        height: 50vh;
-        background: url("../images/hackers-dark.jpg") no-repeat center center;
-        background-size: cover;
+      #raison #raison-splash {
+        height: 80vh;
         background-attachment: fixed; } }
-    #solutions #solutions-splash img {
+    #raison #raison-splash #quote-1 {
       display: block;
-      width: 100%; }
+      font-family: "Gentium Book Basic", serif;
+      color: white;
+      text-shadow: 2px 2px 2px black; }
       @media only screen and (min-width: 1025px) {
-        #solutions #solutions-splash img {
-          display: none; } }
-  #solutions #slogan-3 {
-    height: 21px;
-    width: 280px;
+        #raison #raison-splash #quote-1 {
+          float: left; } }
+  #raison #slogan-3-underline {
+    height: 10px;
+    width: 200px;
     position: relative;
-    margin: 0px auto 60px;
-    padding: 0px 0px 0px 0px; }
+    margin: 20px auto 40px; }
     @media only screen and (min-width: 768px) {
-      #solutions #slogan-3 {
-        padding-top: 30px;
-        height: 45px;
-        width: 600px; } }
+      #raison #slogan-3-underline {
+        width: 200px;
+        height: 10px; } }
     @media only screen and (min-width: 1025px) {
-      #solutions #slogan-3 {
-        padding-top: 40px;
-        height: 60px;
-        width: 800px; } }
-    #solutions #slogan-3 #slogan-3-svg {
-      width: 280px;
-      position: absolute; }
-      @media only screen and (min-width: 768px) {
-        #solutions #slogan-3 #slogan-3-svg {
-          width: 600px; } }
-      @media only screen and (min-width: 1025px) {
-        #solutions #slogan-3 #slogan-3-svg {
-          width: 800px; } }
-  #solutions #approach-text {
-    margin-bottom: 0px; }
-    @media only screen and (min-width: 768px) {
-      #solutions #approach-text {
-        margin-bottom: 20px; } }
-    @media only screen and (min-width: 1025px) {
-      #solutions #approach-text {
-        margin-bottom: 20px; } }
-  #solutions .list-bullet {
-    opacity: 0; }
-    #solutions .list-bullet .glyph {
-      text-align: center;
-      margin-top: 20px; }
-    #solutions .list-bullet h5 {
-      text-transform: uppercase;
-      text-align: center;
-      color: rgba(0, 0, 0, 0.3);
-      transition: color 0.2s ease-in-out;
-      -webkit-transition: color 0.2s ease-in-out; }
-    #solutions .list-bullet p {
-      font-size: 1.7rem; }
-    #solutions .list-bullet .sub-header {
-      font-weight: 700;
-      text-align: center;
-      display: block; }
-      @media only screen and (min-width: 768px) {
-        #solutions .list-bullet .sub-header {
-          text-align: left; } }
-      @media only screen and (min-width: 1025px) {
-        #solutions .list-bullet .sub-header {
-          text-align: left; } }
-  #solutions .lb-left {
-    padding-right: 0px; }
-    @media only screen and (min-width: 768px) {
-      #solutions .lb-left {
-        padding-right: 25px; } }
-    @media only screen and (min-width: 1025px) {
-      #solutions .lb-left {
-        padding-right: 25px; } }
-  #solutions .lb-right {
-    padding-left: 0px; }
-    @media only screen and (min-width: 768px) {
-      #solutions .lb-right {
-        padding-right: 25px; } }
-    @media only screen and (min-width: 1025px) {
-      #solutions .lb-right {
-        padding-right: 25px; } }
-  #solutions .spacer {
-    width: 100%;
-    height: 40px; }
-    @media only screen and (min-width: 768px) {
-      #solutions .spacer {
-        display: 80px; } }
-    @media only screen and (min-width: 1025px) {
-      #solutions .spacer {
-        display: block;
-        height: 80px; } }
-  #solutions .spacer-remove {
-    display: none; }
-    @media only screen and (min-width: 768px) {
-      #solutions .spacer-remove {
-        display: block; } }
-    @media only screen and (min-width: 1025px) {
-      #solutions .spacer-remove {
-        display: block; } }
-
-#about {
-  position: relative;
-  background-color: #d1d0c9;
-  height: 1010px;
-  width: 100%;
-  z-index: 3;
-  font-size: 1.6rem; }
-  @media only screen and (min-width: 768px) {
-    #about {
-      background: url("../images/falcon.jpg") no-repeat center center;
-      background-size: cover;
-      font-size: 2rem;
-      height: 1010px; } }
-  @media only screen and (min-width: 1025px) {
-    #about {
-      background: url("../images/falcon.jpg") no-repeat center center;
-      background-size: cover;
-      font-size: 2.5rem;
-      height: 1000px; } }
-  #about #about-us {
-    height: 23px;
-    width: 300px;
-    position: relative;
-    margin: 0px auto 20px;
-    padding-top: 70px; }
-    @media only screen and (min-width: 768px) {
-      #about #about-us {
-        height: 45px;
-        width: 600px;
-        padding-top: 40px; } }
-    @media only screen and (min-width: 1025px) {
-      #about #about-us {
-        height: 60px;
-        width: 800px;
-        padding-top: 40px; } }
-    #about #about-us #about-us-svg {
-      width: 300px;
+      #raison #slogan-3-underline {
+        width: 200px;
+        height: 10px; } }
+    #raison #slogan-3-underline #slogan-3-underline-svg {
+      width: 200px;
       position: absolute;
       bottom: 0; }
       @media only screen and (min-width: 768px) {
-        #about #about-us #about-us-svg {
-          width: 600px; } }
+        #raison #slogan-3-underline #slogan-3-underline-svg {
+          width: 200px; } }
       @media only screen and (min-width: 1025px) {
-        #about #about-us #about-us-svg {
-          width: 800px; } }
-  #about .skill-holder {
-    opacity: 0;
-    overflow: hidden;
-    width: 260px;
-    margin: 0px auto; }
-    @media only screen and (min-width: 768px) {
-      #about .skill-holder {
-        width: 400px;
-        margin: 0px; } }
-    @media only screen and (min-width: 1025px) {
-      #about .skill-holder {
-        width: 600px;
-        height: 290px;
-        margin: 0px; } }
-    #about .skill-holder .tab-content {
-      font-size: 1.5rem; }
-      @media only screen and (min-width: 768px) {
-        #about .skill-holder .tab-content {
-          font-size: 1.6rem; } }
-      @media only screen and (min-width: 1025px) {
-        #about .skill-holder .tab-content {
-          font-size: 1.8rem; } }
-      #about .skill-holder .tab-content div {
-        width: 80%; }
-  #about .tabs {
-    width: 260px;
-    margin: 30px auto 0px auto;
-    text-align: center;
-    cursor: pointer; }
-    @media only screen and (min-width: 768px) {
-      #about .tabs {
-        width: 400px;
-        margin: 30px 0px 0px 0px; } }
-    @media only screen and (min-width: 1025px) {
-      #about .tabs {
-        width: 600px;
-        margin: 30px 0px 0px 0px; } }
-    #about .tabs li {
-      text-transform: uppercase;
-      font-family: "PT Sans Narrow", sans-serif;
-      list-style-type: none;
-      display: inline-block;
-      padding: 0px 10px 0px 10px;
-      font-size: 1.5rem; }
-      @media only screen and (min-width: 768px) {
-        #about .tabs li {
-          font-size: 1.7rem; } }
-      @media only screen and (min-width: 1025px) {
-        #about .tabs li {
-          font-size: 1.9rem; } }
-    #about .tabs li:first-child {
-      padding: 0px 10px 0px 0px; }
-  #about #divider {
+        #raison #slogan-3-underline #slogan-3-underline-svg {
+          width: 200px; } }
+  #raison #slogan-3-1-underline {
     height: 10px;
-    width: 300px;
-    margin: 0px auto 10px auto;
-    position: relative; }
-    @media only screen and (min-width: 768px) {
-      #about #divider {
-        width: 400px;
-        margin: 0px 0px 10px 0px; } }
-    @media only screen and (min-width: 1025px) {
-      #about #divider {
-        width: 600px;
-        margin: 0px 0px 10px 0px; } }
-    #about #divider #divider-line {
-      position: absolute;
-      top: 0;
-      width: 300px; }
-      @media only screen and (min-width: 768px) {
-        #about #divider #divider-line {
-          width: 400px; } }
-      @media only screen and (min-width: 1025px) {
-        #about #divider #divider-line {
-          width: 600px; } }
-  #about .location {
     width: 200px;
+    position: relative;
+    margin: 20px auto 40px; }
+    @media only screen and (min-width: 768px) {
+      #raison #slogan-3-1-underline {
+        width: 200px;
+        height: 10px; } }
+    @media only screen and (min-width: 1025px) {
+      #raison #slogan-3-1-underline {
+        width: 200px;
+        height: 10px; } }
+    #raison #slogan-3-1-underline #slogan-3-1-underline-svg {
+      width: 200px;
+      position: absolute;
+      bottom: 0; }
+      @media only screen and (min-width: 768px) {
+        #raison #slogan-3-1-underline #slogan-3-1-underline-svg {
+          width: 200px; } }
+      @media only screen and (min-width: 1025px) {
+        #raison #slogan-3-1-underline #slogan-3-1-underline-svg {
+          width: 200px; } }
+  @media only screen and (min-width: 768px) {
+    #raison #reasons {
+      margin-bottom: 20px; } }
+  @media only screen and (min-width: 1025px) {
+    #raison #reasons {
+      margin-bottom: 20px; } }
+  #raison #reasons .reason {
+    text-align: center;
+    opacity: 0; }
+
+.nisosbird {
+  margin: 40px auto -35px;
+  height: 80px;
+  text-align: center; }
+  .nisosbird img {
+    height: 80px; }
+
+#approach {
+  position: relative;
+  background-color: #1d2a40;
+  color: white;
+  width: 100%;
+  z-index: 3;
+  font-size: 1.6rem;
+  padding-bottom: 40px; }
+  @media only screen and (min-width: 768px) {
+    #approach {
+      font-size: 2rem; } }
+  @media only screen and (min-width: 1025px) {
+    #approach {
+      font-size: 2.5rem; } }
+  #approach #approach-splash {
+    width: 100%;
+    display: block;
+    height: 70vh;
+    background: url("../images/industrial.jpg") no-repeat center right;
+    background-size: cover;
+    background-attachment: scroll; }
+    @media only screen and (min-width: 1025px) {
+      #approach #approach-splash {
+        height: 80vh;
+        background-attachment: fixed; } }
+    #approach #approach-splash #quote-2 {
+      display: block;
+      font-family: "Gentium Book Basic", serif;
+      color: white;
+      text-shadow: 2px 2px 2px black; }
+      @media only screen and (min-width: 1025px) {
+        #approach #approach-splash #quote-2 {
+          float: right;
+          color: black; } }
+  #approach #slogan-4-underline, #approach #slogan-4-1-underline {
+    height: 10px;
+    width: 200px;
+    position: relative;
+    margin: 20px auto 40px; }
+    @media only screen and (min-width: 768px) {
+      #approach #slogan-4-underline, #approach #slogan-4-1-underline {
+        width: 200px;
+        height: 10px; } }
+    @media only screen and (min-width: 1025px) {
+      #approach #slogan-4-underline, #approach #slogan-4-1-underline {
+        width: 200px;
+        height: 10px; } }
+    #approach #slogan-4-underline #slogan-4-underline-svg, #approach #slogan-4-underline #slogan-4-1-underline-svg, #approach #slogan-4-1-underline #slogan-4-underline-svg, #approach #slogan-4-1-underline #slogan-4-1-underline-svg {
+      width: 200px;
+      position: absolute;
+      bottom: 0; }
+      @media only screen and (min-width: 768px) {
+        #approach #slogan-4-underline #slogan-4-underline-svg, #approach #slogan-4-underline #slogan-4-1-underline-svg, #approach #slogan-4-1-underline #slogan-4-underline-svg, #approach #slogan-4-1-underline #slogan-4-1-underline-svg {
+          width: 200px; } }
+      @media only screen and (min-width: 1025px) {
+        #approach #slogan-4-underline #slogan-4-underline-svg, #approach #slogan-4-underline #slogan-4-1-underline-svg, #approach #slogan-4-1-underline #slogan-4-underline-svg, #approach #slogan-4-1-underline #slogan-4-1-underline-svg {
+          width: 200px; } }
+  #approach .stos {
+    font-family: "Gentium Book Basic", serif;
+    text-align: center;
+    opacity: 0; }
+  #approach .sto-title {
+    width: 100%;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 18px; }
+  #approach .sto-cont {
+    display: block;
+    width: 100%;
+    clear: both; }
+    #approach .sto-cont .sto {
+      text-transform: uppercase;
+      width: 260px;
+      display: block;
+      float: left;
+      padding-left: 20px; }
+    #approach .sto-cont .sto-desc {
+      float: left;
+      display: block;
+      width: 680px;
+      padding: 0px 0px 20px 0px; }
+      #approach .sto-cont .sto-desc li {
+        margin-bottom: 0px;
+        margin-left: 10px;
+        list-style-type: circle;
+        list-style-position: inside; }
+
+#discretion {
+  position: relative;
+  background-color: #1d2a40;
+  width: 100%;
+  z-index: 3;
+  font-size: 1.6rem;
+  padding-bottom: 40px; }
+  @media only screen and (min-width: 768px) {
+    #discretion {
+      font-size: 2rem; } }
+  @media only screen and (min-width: 1025px) {
+    #discretion {
+      font-size: 2.5rem; } }
+  #discretion #discretion-splash {
+    width: 100%;
+    display: block;
+    height: 70vh;
+    background: url("../images/oilrigs.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: scroll; }
+    @media only screen and (min-width: 1025px) {
+      #discretion #discretion-splash {
+        height: 80vh;
+        background-attachment: fixed; } }
+    #discretion #discretion-splash #quote-3 {
+      display: block;
+      font-family: "Gentium Book Basic", serif;
+      color: white;
+      text-shadow: 2px 2px 2px black; }
+      @media only screen and (min-width: 1025px) {
+        #discretion #discretion-splash #quote-3 {
+          float: left; } }
+  #discretion #slogan-5-underline, #discretion #slogan-5-1-underline {
+    height: 10px;
+    width: 200px;
+    position: relative;
+    margin: 20px auto 40px; }
+    @media only screen and (min-width: 768px) {
+      #discretion #slogan-5-underline, #discretion #slogan-5-1-underline {
+        width: 200px;
+        height: 10px; } }
+    @media only screen and (min-width: 1025px) {
+      #discretion #slogan-5-underline, #discretion #slogan-5-1-underline {
+        width: 200px;
+        height: 10px; } }
+    #discretion #slogan-5-underline #slogan-5-underline-svg, #discretion #slogan-5-underline #slogan-5-1-underline-svg, #discretion #slogan-5-1-underline #slogan-5-underline-svg, #discretion #slogan-5-1-underline #slogan-5-1-underline-svg {
+      width: 200px;
+      position: absolute;
+      bottom: 0; }
+      @media only screen and (min-width: 768px) {
+        #discretion #slogan-5-underline #slogan-5-underline-svg, #discretion #slogan-5-underline #slogan-5-1-underline-svg, #discretion #slogan-5-1-underline #slogan-5-underline-svg, #discretion #slogan-5-1-underline #slogan-5-1-underline-svg {
+          width: 200px; } }
+      @media only screen and (min-width: 1025px) {
+        #discretion #slogan-5-underline #slogan-5-underline-svg, #discretion #slogan-5-underline #slogan-5-1-underline-svg, #discretion #slogan-5-1-underline #slogan-5-underline-svg, #discretion #slogan-5-1-underline #slogan-5-1-underline-svg {
+          width: 200px; } }
+  #discretion #pitch {
+    text-align: center;
+    color: white;
+    font-family: "Gentium Book Basic", serif; }
+  #discretion .pitches {
+    opacity: 0; }
+
+#osprey-end {
+  font-size: 1.6rem;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  background: url("../images/falcon-bg.jpg") no-repeat center center;
+  background-size: 100%;
+  padding-bottom: 30px; }
+  @media only screen and (min-width: 768px) {
+    #osprey-end {
+      font-size: 2rem; } }
+  @media only screen and (min-width: 1025px) {
+    #osprey-end {
+      font-size: 2.5rem; } }
+  #osprey-end #birdcontain {
+    background: url("../images/falcon.png") no-repeat center center;
+    background-size: 100%;
+    margin: 0px auto;
+    width: 300px;
+    height: 259px; }
+    @media only screen and (min-width: 1025px) {
+      #osprey-end #birdcontain {
+        width: 450px;
+        height: 388px; } }
+  #osprey-end .location {
+    width: 300px;
     text-align: center;
     position: relative;
     margin: 15px auto;
@@ -616,29 +646,19 @@ header {
     padding-top: 15px;
     font-family: "PT Sans Narrow", sans-serif;
     color: black;
-    font-size: 2rem; }
-  #about .social {
+    font-size: 1.6rem; }
+    @media only screen and (min-width: 1025px) {
+      #osprey-end .location {
+        width: 400px;
+        font-size: 2rem; } }
+  #osprey-end .social {
     width: 100%;
     text-align: center; }
-    #about .social svg {
+    #osprey-end .social svg {
       margin: 0px 10px;
       cursor: pointer; }
-  #about #copyright {
+  #osprey-end #copyright {
     width: 100%;
     text-align: center;
     font-family: "PT Sans Narrow", sans-serif;
     font-size: 1.2rem; }
-
-.swipe {
-  overflow: hidden;
-  visibility: hidden;
-  position: relative; }
-
-.swipe-wrap {
-  overflow: hidden;
-  position: relative; }
-
-.swipe-wrap > div {
-  float: left;
-  width: 100%;
-  position: relative; }

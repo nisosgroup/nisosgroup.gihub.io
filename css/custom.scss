@@ -24,8 +24,11 @@
 }
 
 // Fonts
-$sansSerifed: "PT Sans", sans-serif;
+//$sansSerifed: "PT Sans", sans-serif;
+$sansSerifed: 'Gentium Book Basic', serif;
+//$sansSerifed: 'Lato', sans-serif;
 $sansTitle: "PT Sans Narrow", sans-serif;
+//$sansTitle: 'Gentium Book Basic', serif;
 
 // Colors
 $blue: rgb(71,150,255);
@@ -44,7 +47,7 @@ $brown: #564535;
 nav {
     transform: translateY(-45px);
     font-family: $sansTitle;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     height: 45px;
     text-align: center;
     width: 100%;
@@ -70,7 +73,6 @@ nav {
         text-transform: uppercase;
     }
     .contact-trigger-contain {
-        background-color: $navBlueSolid;
         z-index: 500;
         position: relative;
     }
@@ -89,19 +91,27 @@ nav {
         opacity: 0;
         position: absolute;
         top: 35px;
-        height: 50px;
-        width: 190px;
+        height: 80px;
+        width: 150px;
         margin-left: -80px;
         text-align: center;
         padding: 10px;
         z-index: -200;
         font-family: $sansSerifed;
+        @include respond-to(tablet){
+            height: 50px;
+            width: 190px;
+        }
     }
     #contact-drop-bg {
         background-color: rgba(255,255,255,0.9);
     }
     #contact-drop {
         color: black;
+        font-size: 1.2rem;
+        @include respond-to(tablet) {
+            font-size: 1.6rem;
+        }
         a, a:visited {
             text-transform: capitalize;
             color: black;
@@ -259,10 +269,10 @@ header {
                 height: 224px;
             }
             @include respond-to(desktop) {
-                margin-left: -512px;
-                margin-top: -224px;
-                width: 1024px;
-                height: 448px;
+                margin-left: -402px;
+                margin-top: -176px;
+                width: 804px;
+                height: 352px;
             }
             #logo-svg {
                 width: 300px;
@@ -272,8 +282,8 @@ header {
                     height: 224px;
                 }
                 @include respond-to(desktop) {
-                    width: 1024px;
-                    height: 448px;
+                    width: 804px;
+                    height: 352px;
                 }
             }
         }
@@ -310,148 +320,140 @@ header {
     }
 }
 
+.slogans {
+    height: 25px;
+    width: 269px;
+    position: relative;
+    margin: 20px auto;
+    @include respond-to(tablet) {
+        width: 400px;
+        height: 38px;
+    }
+    @include respond-to(desktop) {
+        width: 590px;
+        height: 55px;
+    }
+    .slogan-svg {
+        width: 269px;
+        position: absolute;
+        bottom: 0;
+        @include respond-to(tablet) {
+            width: 400px;
+        }
+        @include respond-to(desktop) {
+            width: 590px;
+        }
+    }
+}
+
+.slogans-long {
+    height: 25px;
+    width: 300px;
+    position: relative;
+    margin: 20px auto;
+    @include respond-to(tablet) {
+        width: 470px;
+        height: 38px;
+    }
+    @include respond-to(desktop) {
+        width: 680px;
+        height: 55px;
+    }
+    .slogan-long-svg {
+        width: 300px;
+        position: absolute;
+        bottom: 0;
+        @include respond-to(tablet) {
+            width: 470px;
+        }
+        @include respond-to(desktop) {
+            width: 680px;
+        }
+    }
+}
+
 #problem {
     position: relative;
     background-color: $navBlueSolid;
     z-index: 3;
     display: block;
     overflow: hidden;
-    #slogan-2-1 {
-        height: 38px;
+    padding-bottom: 40px;
+    #slogan-2-1-underline, #slogan-2-2-underline {
+        height: 10px;
         width: 300px;
         position: relative;
-        margin: 0px auto;
-        padding-top: 70px;
+        margin: 20px auto 40px;
         @include respond-to(tablet) {
-            width: 600px;
-            height: 75px;
-            padding-top: 70px;
-        }
-        @include respond-to(desktop) {
-            padding-top: 40px;
-            width: 800px;
-            height: 100px;
-        }
-        #slogan-2-1-svg {
-            width: 300px;
-            position: absolute;
-            bottom: 0;
-            @include respond-to(tablet) {
-                width: 600px;
-            }
-            @include respond-to(desktop) {
-                width: 800px;
-            }
-        }
-    }
-    #graph {
-        position: relative;
-        margin: 0px auto;
-        width: 300px;
-        height: 300px;
-        @include respond-to(tablet) {
-            margin: 0px auto;
-            width: 600px;
-            height: 600px;
-        }
-        @include respond-to(desktop) {
-            float: left;
-            margin: 0px auto 20px;
-            padding-top: 20px;
             width: 400px;
-            height: 400px;
+            height: 10px;
         }
-        #graph-axes-svg {
+        @include respond-to(desktop) {
+            width: 500px;
+            height: 10px;
+        }
+        #slogan-2-1-underline-svg, #slogan-2-2-underline-svg {
+            width: 300px;
             position: absolute;
             bottom: 0;
-            width: 300px;
-            height: 300px;
             @include respond-to(tablet) {
-                width: 600px;
-                height: 600px;
+                width: 400px;
             }
             @include respond-to(desktop) {
-                width: 400px;
-                height: 400px;
-            }
-        }
-        #graph-the-rest-svg {
-            position: absolute;
-            bottom: 0;
-            width: 300px;
-            height: 300px;
-            @include respond-to(tablet) {
-                width: 600px;
-                height: 600px;
-            }
-            @include respond-to(desktop) {
-                width: 400px;
-                height: 400px;
-            }
-            #graph-shading, .graph-labels, #graph-nisos {
-                opacity: 0;
+                width: 500px;
             }
         }
     }
     #mission-content {
-        width: 260px;
+        font-weight: 400;
         font-family: $sansSerifed;
         font-size: 1.6rem;
         color: white;
-        margin: 20px auto;
+        margin: 0px auto 40px;
         text-align: center;
         @include respond-to(tablet) {
-            margin: 40px auto;
-            text-align: center;
-            width: 600px;
             font-size: 1.8rem;
         }
         @include respond-to(desktop) {
-            text-align: left;
-            float:right;
-            width: 450px;
-            font-size: 2rem;
-            margin: 80px 0px;
+            font-size: 2.5rem;
         }
-        .adapt-lose {
+        .threat-para {
+            position: relative;
             display: block;
             opacity: 0;
-            position: relative;
-            margin-bottom: 20px;
+            margin: 0px auto 20px auto;
             @include respond-to(desktop) {
-                margin-bottom: 20px;
+                width: 960px;
+                margin: 0px auto 40px auto;
             }
-            .adapt-lose-strong {
-                font-weight: 700;
-                font-family: $sansTitle;
+            .threat-para-strong {
+                font-weight: 400;
+                font-family: $sansSerifed;
                 text-transform: uppercase;
-                //color: $blue;
             }
         }
-    }
-    #gap {
-        opacity: 0;
-        display:block;
-        margin-bottom: 40px;
-        clear:both;
-        width: 100%;
-        text-align: center;
-        color: white;
-        font-size: 1.8rem;
-        text-transform: uppercase;
-        @include respond-to(tablet) {
-            font-size: 2rem;
-        }
-        @include respond-to(desktop) {
-            font-size: 2.4rem;
-        }
-
     }
 }
-#solutions {
+.shoutquote {
+    width: 250px;
+    font-weight: bold;
+    text-align: center;
+    position: static;
+    z-index: 0;
+    font-size: 1.8rem;
+    opacity: 1;
+    margin: 0px auto;
+    padding: 60px 0px;
+    @include respond-to(desktop) {
+        width: 450px;
+        padding: 60px 80px;
+        font-size: 2rem;
+    }
+}
+#raison {
     position: relative;
-    background-color: white;
-    color: black;
+    background-color: $navBlueSolid;
+    color: white;
     z-index: 3;
     display: block;
     font-family: $sansSerifed;
@@ -462,260 +464,371 @@ header {
     @include respond-to(desktop) {
         font-size: 2.5rem;
     }
-    #solutions-splash {
-        background: url('../images/hackers-dark-mobile.jpg') no-repeat center center;
-        background-size: cover;
-        background-attachment: fixed;
+    #raison-splash {
         width: 100%;
+        height: 70vh;
         display: block;
+        background: url('../images/NYC.jpg') no-repeat center center;
+        background-size: cover;
+        background-attachment: scroll;
         @include respond-to(desktop) {
-            height: 50vh;
-            background: url('../images/hackers-dark.jpg') no-repeat center center;
-            background-size: cover;
+            height: 80vh;
             background-attachment: fixed;
         }
-        img {
+        #quote-1 {
             display: block;
-            width: 100%;
+            font-family: $sansSerifed;
+            color: white;
+            text-shadow: 2px 2px 2px black; 
             @include respond-to(desktop) {
-                display: none;
+                float: left;
             }
         }
     }
-    #slogan-3 {
-        height: 21px;
-        width: 280px;
+    //#slogan-3 {
+    //    height: 21px;
+    //    width: 280px;
+    //    position: relative;
+    //    margin: 0px auto;
+    //    padding: 0px 0px 0px 0px;
+    //    @include respond-to(tablet) {
+    //        height: 45px;
+    //        width: 600px;
+    //    }
+    //    @include respond-to(desktop) {
+    //        height: 60px;
+    //        width: 800px;
+    //    }
+    //    #slogan-3-svg {
+    //        width: 280px;
+    //        position: absolute;
+    //        @include respond-to(tablet) {
+    //            width: 600px;
+    //        }
+    //        @include respond-to(desktop) {
+    //            width: 800px;
+    //        }
+    //    }
+    //}
+    #slogan-3-underline {
+        height: 10px;
+        width: 200px;
         position: relative;
-        margin: 0px auto 60px;
-        padding: 0px 0px 0px 0px;
+        margin: 20px auto 40px;
         @include respond-to(tablet) {
-            padding-top: 30px;
-            height: 45px;
-            width: 600px;
+            width: 200px;
+            height: 10px;
         }
         @include respond-to(desktop) {
-            padding-top: 40px;
-            height: 60px;
-            width: 800px;
+            width: 200px;
+            height: 10px;
+
         }
-        #slogan-3-svg {
-            width: 280px;
-            position: absolute;
-            @include respond-to(tablet) {
-                width: 600px;
-            }
-            @include respond-to(desktop) {
-                width: 800px;
-            }
-        }
-    }
-    #approach-text {
-        margin-bottom: 0px;
-        @include respond-to(tablet) {
-            margin-bottom: 20px;
-        }
-        @include respond-to(desktop) {
-            margin-bottom: 20px;
-        }
-    }
-    .list-bullet {
-        opacity: 0;
-        .glyph {
-            text-align: center;
-            margin-top: 20px;
-        }
-        h5 {
-            text-transform: uppercase;
-            text-align: center;
-            color: rgba(0,0,0,.3);
-            @include color-transition(.2s)
-        }
-        p {
-            font-size: 1.7rem;
-        }
-        .sub-header {
-            font-weight: 700;
-            text-align: center;
-            display: block;
-            @include respond-to(tablet) {
-                text-align: left;
-            }
-            @include respond-to(desktop) {
-                text-align: left;
-            }
-        }
-    }
-    .lb-left {
-        padding-right: 0px;
-        @include respond-to(tablet) {
-            padding-right: 25px;
-        }
-        @include respond-to(desktop) {
-            padding-right: 25px;
-        }
-    }
-    .lb-right {
-        padding-left: 0px;
-        @include respond-to(tablet) {
-            padding-right: 25px;
-        }
-        @include respond-to(desktop) {
-            padding-right: 25px;
-        }
-    }
-    .spacer {
-        width: 100%;
-        height: 40px;
-        @include respond-to(tablet) {
-            display: 80px;
-        }
-        @include respond-to(desktop) {
-            display: block;
-            height: 80px;
-        }
-    }
-    .spacer-remove {
-        display: none;
-        @include respond-to(tablet) {
-            display: block;
-        }
-        @include respond-to(desktop) {
-            display: block;
-        }
-    }
-}
-#about {
-    position: relative;
-    background-color: #d1d0c9;
-    height: 1010px;
-    width: 100%;
-    z-index: 3;
-    font-size: 1.6rem;
-    @include respond-to(tablet) {
-        background: url('../images/falcon.jpg') no-repeat center center;
-        background-size: cover;
-        font-size: 2rem;
-        height: 1000px
-    }
-    @include respond-to(desktop) {
-        background: url('../images/falcon.jpg') no-repeat center center;
-        background-size: cover;
-        font-size: 2.5rem;
-        height: 1000px;
-    }
-    #about-us {
-        height: 23px;
-        width: 300px;
-        position: relative;
-        margin: 0px auto 20px;
-        padding-top: 70px;
-        @include respond-to(tablet) {
-            height: 45px;
-            width: 600px;
-            padding-top: 40px;
-        }
-        @include respond-to(desktop) {
-            height: 60px;
-            width: 800px;
-            padding-top: 40px;
-        }
-        #about-us-svg {
-            width: 300px;
+        #slogan-3-underline-svg {
+            width: 200px;
             position: absolute;
             bottom: 0;
             @include respond-to(tablet) {
-                width: 600px;
+                width: 200px;
             }
             @include respond-to(desktop) {
-                width: 800px;
+                width: 200px;
             }
         }
     }
-    .skill-holder{
-        opacity: 0;
-        overflow: hidden;
-        width: 260px;
-        margin: 0px auto;
-        @include respond-to(tablet) {
-            width: 400px;
-            margin: 0px;
-        }
-        @include respond-to(desktop) {
-            width: 600px;
-            height: 290px;
-            margin: 0px;
-        }
-        .tab-content {
-            font-size: 1.5rem;
-            @include respond-to(tablet) {
-                font-size: 1.6rem;
-            }
-            @include respond-to(desktop) {
-                font-size: 1.8rem;
-            }
-            div {
-                width: 80%;
-            }
-        }
-    }
-    .tabs {
-        width: 260px;
-        margin: 30px auto 0px auto;
-        text-align: center;
-        cursor:pointer;
-        @include respond-to(tablet) {
-            width: 400px;
-            margin: 30px 0px 0px 0px;
-        }
-        @include respond-to(desktop) {
-            width: 600px;
-            margin: 30px 0px 0px 0px;
-        }
-        li {
-            text-transform: uppercase;
-            font-family: $sansTitle;
-            list-style-type: none;
-            display: inline-block;
-            padding: 0px 10px 0px 10px;
-            font-size: 1.5rem;
-            @include respond-to(tablet) {
-                font-size: 1.7rem;
-            }
-            @include respond-to(desktop) {
-                font-size: 1.9rem;
-            }
-        }
-        li:first-child {
-            padding: 0px 10px 0px 0px;
-        }
-    }
-    #divider {
+    #slogan-3-1-underline {
         height: 10px;
-        width: 300px;
-        margin: 0px auto 10px auto;
+        width: 200px;
         position: relative;
+        margin: 20px auto 40px;
         @include respond-to(tablet) {
-            width: 400px;
-            margin: 0px 0px 10px 0px;
+            width: 200px;
+            height: 10px;
         }
         @include respond-to(desktop) {
-            width: 600px;
-            margin: 0px 0px 10px 0px;
+            width: 200px;
+            height: 10px;
+
         }
-        #divider-line {
+        #slogan-3-1-underline-svg {
+            width: 200px;
             position: absolute;
-            top: 0;
-            width: 300px;
+            bottom: 0;
             @include respond-to(tablet) {
-                width: 400px;
+                width: 200px;
             }
             @include respond-to(desktop) {
-                width: 600px;
+                width: 200px;
             }
         }
-    }  
-    .location {
+    }
+    #reasons {
+        @include respond-to(tablet) {
+            margin-bottom: 20px;
+        }
+        @include respond-to(desktop) {
+            margin-bottom: 20px;
+        }
+        .reason {
+            text-align: center;
+            opacity: 0;
+        }
+    }
+}
+.nisosbird {
+    margin: 40px auto -35px;
+    height: 80px;
+    text-align: center;
+    img {
+        height: 80px;
+    }
+}
+#approach {
+    position: relative;
+    background-color: $navBlueSolid;
+    color: white;
+    width: 100%;
+    z-index: 3;
+    font-size: 1.6rem;
+    padding-bottom: 40px;
+    @include respond-to(tablet) {
+        font-size: 2rem;
+    }
+    @include respond-to(desktop) {
+        font-size: 2.5rem;
+    }
+    #approach-splash {
+        width: 100%;
+        display: block;
+        height: 70vh;
+        background: url('../images/industrial.jpg') no-repeat center right;
+        background-size: cover;
+        background-attachment: scroll;
+        @include respond-to(desktop) {
+            height: 80vh;
+            background-attachment: fixed;
+        }
+        #quote-2 {
+            display: block;
+            font-family: $sansSerifed;
+            color: white;  
+            text-shadow: 2px 2px 2px black;      
+            @include respond-to(desktop) {
+                float: right;
+                color: black;
+            }
+        }
+    }
+    //#slogan-4 {
+    //    height: 21px;
+    //    width: 300px;
+    //    position: relative;
+    //    margin: 0px auto 20px;
+    //    @include respond-to(tablet) {
+    //        height: 42px;
+    //        width: 600px;
+    //    }
+    //    @include respond-to(desktop) {
+    //        height: 55px;
+    //        width: 800px;
+    //    }
+    //    #slogan-4-svg {
+    //        width: 300px;
+    //        position: absolute;
+    //        bottom: 0;
+    //        @include respond-to(tablet) {
+    //            width: 600px;
+    //        }
+    //        @include respond-to(desktop) {
+    //            width: 800px;
+    //        }
+    //    }
+    //}
+    #slogan-4-underline, #slogan-4-1-underline {
+        height: 10px;
         width: 200px;
+        position: relative;
+        margin: 20px auto 40px;
+        @include respond-to(tablet) {
+            width: 200px;
+            height: 10px;
+        }
+        @include respond-to(desktop) {
+            width: 200px;
+            height: 10px;
+
+        }
+        #slogan-4-underline-svg, #slogan-4-1-underline-svg {
+            width: 200px;
+            position: absolute;
+            bottom: 0;
+            @include respond-to(tablet) {
+                width: 200px;
+            }
+            @include respond-to(desktop) {
+                width: 200px;
+            }
+        }
+    }
+    .stos {
+        font-family:$sansSerifed;
+        text-align: center;
+        opacity: 0;
+    }
+    .sto-title {
+        width: 100%;
+        font-size: 1.8em;
+        text-transform: uppercase;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    .sto-cont {
+        display: block;
+        width: 100%;
+        clear: both;
+        .sto {
+            text-transform: uppercase;
+            width: 260px;
+            display: block;
+            float: left;
+            padding-left: 20px;
+        }
+        .sto-desc {
+            float: left;
+            display: block;
+            width: 680px;
+            padding: 0px 0px 20px 0px;
+            li {
+                margin-bottom: 0px;
+                margin-left: 10px;
+                list-style-type: circle;
+                list-style-position: inside; 
+            }
+        }
+    }
+}
+#discretion {
+    position: relative;
+    background-color: $navBlueSolid;
+    width: 100%;
+    z-index: 3;
+    font-size: 1.6rem;
+    padding-bottom: 40px;
+    @include respond-to(tablet) {
+        font-size: 2rem;
+    }
+    @include respond-to(desktop) {
+        font-size: 2.5rem;
+    }
+    #discretion-splash {
+        width: 100%;
+        display: block;
+        height: 70vh;
+        background: url('../images/oilrigs.jpg') no-repeat center center;
+        background-size: cover;
+        background-attachment: scroll;
+        @include respond-to(desktop) {
+            height: 80vh;
+            background-attachment: fixed;
+        }
+        #quote-3 {
+            display: block;
+            font-family: $sansSerifed;
+            color: white;  
+            text-shadow: 2px 2px 2px black;  
+            @include respond-to(desktop) {
+                float: left;
+            }    
+        }
+    }
+    //#slogan-5 {
+    //    height: 21px;
+    //    width: 300px;
+    //    position: relative;
+    //    margin: 0px auto 20px;
+    //    @include respond-to(tablet) {
+    //        height: 42px;
+    //        width: 600px;
+    //    }
+    //    @include respond-to(desktop) {
+    //        height: 55px;
+    //        width: 800px;
+    //    }
+    //    #slogan-5-svg {
+    //        width: 300px;
+    //        position: absolute;
+    //        bottom: 0;
+    //        @include respond-to(tablet) {
+    //            width: 600px;
+    //        }
+    //        @include respond-to(desktop) {
+    //            width: 800px;
+    //        }
+    //    }
+    //}
+    #slogan-5-underline, #slogan-5-1-underline {
+        height: 10px;
+        width: 200px;
+        position: relative;
+        margin: 20px auto 40px;
+        @include respond-to(tablet) {
+            width: 200px;
+            height: 10px;
+        }
+        @include respond-to(desktop) {
+            width: 200px;
+            height: 10px;
+
+        }
+        #slogan-5-underline-svg, #slogan-5-1-underline-svg {
+            width: 200px;
+            position: absolute;
+            bottom: 0;
+            @include respond-to(tablet) {
+                width: 200px;
+            }
+            @include respond-to(desktop) {
+                width: 200px;
+            }
+        }
+    }
+    #pitch {
+        text-align: center;
+        color: white;
+        font-family: $sansSerifed;
+    }
+    .pitches {
+        opacity: 0;
+    }
+}
+#osprey-end {
+    font-size: 1.6rem;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+    background: url('../images/falcon-bg.jpg') no-repeat center center;
+    background-size: 100%;
+    padding-bottom: 30px;
+    @include respond-to(tablet) {
+        font-size: 2rem;
+    }
+    @include respond-to(desktop) {
+        font-size: 2.5rem;
+    }
+    #birdcontain {
+        background: url("../images/falcon.png") no-repeat center center;
+        background-size: 100%;
+        margin: 0px auto;
+        width: 300px;
+        height: 259px;
+        @include respond-to(desktop) {
+            width: 450px;
+            height: 388px;
+        }
+    }
+    .location {
+        width: 300px;
         text-align: center;
         position: relative;
         margin: 15px auto;
@@ -723,7 +836,11 @@ header {
         padding-top: 15px;
         font-family: $sansTitle;
         color: black;
-        font-size: 2rem;
+        font-size: 1.6rem;
+        @include respond-to(desktop) {
+            width: 400px;
+            font-size: 2rem;
+        }
     }
 
     .social {
@@ -740,19 +857,4 @@ header {
         font-family: $sansTitle;
         font-size: 1.2rem;
     }
-}
-
-.swipe {
-  overflow: hidden;
-  visibility: hidden;
-  position: relative;
-}
-.swipe-wrap {
-  overflow: hidden;
-  position: relative;
-}
-.swipe-wrap > div {
-  float:left;
-  width:100%;
-  position: relative;
 }

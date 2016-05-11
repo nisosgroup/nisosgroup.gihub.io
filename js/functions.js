@@ -123,18 +123,6 @@ $(function($) {
                 p: {strokeOpacity: '0', fillOpacity: '1'},
                 o: {duration: 1000, easing: 'ease-in-out'}
             });
-        $('#logo-svg')
-            .transition({
-                filter: 'drop-shadow( -2px -2px 2px #000 )',
-                '-webkit-filter': 'drop-shadow( -2px -2px 2px #000 )',
-                delay: 1200
-            }, 1000, 'ease');                
-        $('#slogan-svg')
-            .transition({
-                filter: 'drop-shadow( -2px -2px 2px #000 )',
-                '-webkit-filter': 'drop-shadow( -2px -2px 2px #000 )',
-                delay: 1200
-            }, 1000, 'ease');
         $('nav').transition({y:0}, 1000, 'ease');
     }
 
@@ -143,62 +131,17 @@ $(function($) {
             p: {strokeOpacity: '0', fillOpacity: '1'},
             o: {duration: 1000, easing: 'ease-in-out'}
         });
-    }
-
-    function bleedoutGraph() {
-        $('.axes-arrowheads').velocity({
-            p: {fillOpacity: '1'},
-            o: {duration: 200, easing: 'ease-in-out'}
-        });
-        $('#label-time, #label-sophistication').velocity({
-            p: {opacity: '1'},
-            o: {delay: 200, duration: 200, easing: 'ease-in-out'}
-        });
-        $('.graph-line').velocity({
-            p: {strokeDashoffset: '0'},
-            o: {delay: 400, duration: 500, easing: 'ease-in-out'}
-        });
-        $('#label-attacks, #label-defenses').velocity({
-            p: {opacity: '1'},
-            o: {delay: 900, duration: 400, easing: 'ease-in-out'}
-        });
-        $('.label-arrow').velocity({
-            p: {strokeDashoffset: '0'},
-            o: {delay: 1300, duration: 400, easing: 'ease-in-out'}
-        });
-        $('.pointers-arrowheads').velocity({
-            p: {fillOpacity: '1'},
-            o: {delay: 1700, duration: 200, easing: 'ease-in-out'}
-        });
-        $('#graph-shading').velocity({
-            p: {opacity: '1'},
-            o: {delay: 1900, duration: 300, easing: 'ease-in-out'}
-        });
-        $('#today-line-line').velocity({
-            p: {strokeOpacity: '1'},
-            o: {delay: 2200, duration: 200, easing: 'ease-in-out'}
-        });
-        $('#today-line path').velocity({
-            p: {fillOpacity: '1'},
-            o: {delay: 2400, duration: 200, easing: 'ease-in-out'}
-        });
-        $('#graph-nisos').velocity({
-            p: {opacity: '1'},
-            o: {delay: 2700, duration: 300, easing: 'ease-in-out'}
-        });
-    }
-
-    function bleedoutRisk() {
-        $('#risk-svg path').velocity({
-            p: {strokeOpacity: '0', fillOpacity: '1'},
+        $('#slogan-2-1-svg path.evolving-hook').velocity({
+            p: {fill:'#E1DD17'},
             o: {duration: 1000, easing: 'ease-in-out'}
-        });
-        bracket.play();
-    }
-
-    function bleedoutBracket() {
-        $('#bracket-svg path').velocity({
-            p: {strokeOpacity: '0', fillOpacity: '1'},
+        }).velocity({
+            p: {fill:'#FFFFFF'},
+            o: {duration: 1000, easing: 'ease-in-out'}
+        }).velocity({
+            p: {fill:'#ffae28'},
+            o: {duration: 1000, easing: 'ease-in-out'}
+        }).velocity({
+            p: {fill:'#4796FF'},
             o: {duration: 1000, easing: 'ease-in-out'}
         });
     }
@@ -210,95 +153,19 @@ $(function($) {
         });
     }
 
-    function bleedoutAboutUs() {
-        $('#about-us-svg path').velocity({
+    function bleedoutSlogan4() {
+        $('#slogan-4-svg path').velocity({
             p: {strokeOpacity: '0', fillOpacity: '1'},
             o: {duration: 1000, easing: 'ease-in-out'}
         });
     }
-    
-    // Hover color change for glyphs
-    $('.list-bullet').hover(function(){
-        $('h5', this).css({color: 'rgb(29,42,64)'});
-        var svgFill = $('.glyph svg path, .glyph svg polygon', this);
-        svgFill.data({animating: false});
-        if (svgFill.data('animating') === true){
-            svgFill.velocity("stop", true).velocity('reverse',{ duration:300});
-            svgFill.data({animating:false});
-        } else {
-            svgFill.velocity({
-                p: {fillRed: 29, fillGreen: 42, fillBlue: 64, fillOpacity: 1},
-                o: {duration: 200, 
-                    easing: 'ease-in-out',
-                    begin: function(){
-                        svgFill.data({animating:true});
-                    },
-                    complete: function(){
-                        svgFill.data({animating:false});
-                    }
-                }
-            });
-        }
-        var svgStroke = $('.glyph svg circle', this);
-        svgStroke.data({animating: false});
-        if (svgStroke.data('animating') === true){
-            svgStroke.velocity("stop", true).velocity('reverse',{ duration:300});
-            svgStroke.data({animating:false});
-        } else {
-            svgStroke.velocity({
-                p: {strokeRed: 29, strokeGreen: 42, strokeBlue: 64, strokeOpacity: 1},
-                o: {duration: 200, 
-                    easing: 'ease-in-out',
-                    begin: function(){
-                        svgFill.data({animating:true});
-                    },
-                    complete: function(){
-                        svgFill.data({animating:false});
-                    }
-                }
-            });
-        }
-    },function(){
-        $('h5', this).css({color: 'rgba(0,0,0,.3)'});
-        var svgFill = $('.glyph svg path, .glyph svg polygon', this);
-        svgFill.data({animating: false});
-        if (svgFill.data('animating') === true){
-            svgFill.velocity("stop", true).velocity('reverse',{ duration:300});
-            svgFill.data({animating:false});
-        } else {
-            svgFill.velocity({
-                p: {fillRed: 0, fillGreen: 0, fillBlue: 0, fillOpacity: 0.3},
-                o: {duration: 200, 
-                    easing: 'ease-in-out',
-                    begin: function(){
-                        svgFill.data({animating:true});
-                    },
-                    complete: function(){
-                        svgFill.data({animating:false});
-                    }
-                }
-            });
-        }
-        var svgStroke = $('.glyph svg circle', this);
-        svgStroke.data({animating: false});
-        if (svgStroke.data('animating') === true){
-            svgStroke.velocity("stop", true).velocity('reverse',{ duration:300});
-            svgStroke.data({animating:false});
-        } else {
-            svgStroke.velocity({
-                p: {strokeRed: 0, strokeGreen: 0, strokeBlue: 0, strokeOpacity: 0.3},
-                o: {duration: 200, 
-                    easing: 'ease-in-out',
-                    begin: function(){
-                        svgFill.data({animating:true});
-                    },
-                    complete: function(){
-                        svgFill.data({animating:false});
-                    }
-                }
-            });
-        }
-    });
+
+    function bleedoutSlogan5() {
+        $('#slogan-5-svg path').velocity({
+            p: {strokeOpacity: '0', fillOpacity: '1'},
+            o: {duration: 1000, easing: 'ease-in-out'}
+        });
+    }
 
     // Nav menu home button (logo)
     $('.small-logo').on('click', function(){
@@ -306,11 +173,11 @@ $(function($) {
     });
 
     // Drawing Code
-    var logo = new Vivus('logo-svg', {type: 'async', duration: 50, start: 'manual'}, bleedoutLogo);
+    var logo = new Vivus('logo-svg', {type: 'async', duration: 30, start: 'manual'}, bleedoutLogo);
     var slogan2a = new Vivus('slogan-2-1-svg', {type: 'async', duration: 30, start: 'inViewport'}, bleedoutSlogan2);
-    var graph = new Vivus('graph-axes-svg', {type: 'async', duration: 20, start: 'inViewport'}, bleedoutGraph);
     var slogan3 = new Vivus('slogan-3-svg', {type: 'async', duration: 30, start: 'inViewport'}, bleedoutSlogan3);
-    var slogan4 = new Vivus('about-us-svg', {type: 'async', duration: 30, start: 'inViewport'}, bleedoutAboutUs);
+    var slogan4 = new Vivus('slogan-4-svg', {type: 'async', duration: 30, start: 'inViewport'}, bleedoutSlogan4);
+    var slogan5 = new Vivus('slogan-5-svg', {type: 'async', duration: 30, start: 'inViewport'}, bleedoutSlogan5);
     $('#logo-svg-hold').css({opacity: 1});
     logo.play();
 
@@ -320,7 +187,7 @@ $(function($) {
         element: document.getElementById('mission-content'),
         handler: function(direction) {
             if (direction === 'down' && insufficienciesPlayed === false) {
-                $('.adapt-lose').velocity("transition.slideUpIn", { stagger: 500, complete: function() {
+                $('.threat-para').velocity("transition.slideUpIn", { stagger: 500, complete: function() {
                     $('#mission-content').velocity({
                         p: {borderColorAlpha: 0.4},
                         o: {duration: 400}
@@ -329,49 +196,48 @@ $(function($) {
                 insufficienciesPlayed = true;
             }
         },
-        offset: '75%'
+        offset: '65%'
     });
 
-    var gapperPlayed = false;
-    var gapper = new Waypoint({
-        element: document.getElementById('gap'),
+    var reasonsPlayed = false;
+    var reasons = new Waypoint({
+        element: document.getElementById('reasons'),
         handler: function(direction) {
-            if (direction === 'down' && gapperPlayed === false) {
-                $('#gap').velocity("transition.slideUpIn", { stagger: 500, });
-                gapperPlayed = true;
+            if (direction === 'down' && reasonsPlayed === false) {
+                $('.reason').velocity("transition.slideUpIn", { stagger: 500 });
+                reasonsPlayed = true;
             }
         },
-        offset: '75%'
-    });
-
-    var approachesPlayed = false;
-    var approaches = new Waypoint({
-        element: document.getElementById('approaches-boxes'),
-        handler: function(direction) {
-            if (direction === 'down' && approachesPlayed === false) {
-                $('.list-bullet').velocity("transition.slideUpIn", { stagger: 500, });
-                approachesPlayed = true;
-            }
-        },
-        offset: '75%'
+        offset: '65%'
     });
 
     var skillsPlayed = false;
     var skills = new Waypoint({
-        element: document.getElementById('slider-control'),
+        element: document.getElementById('stocontainer'),
         handler: function(direction) {
             if (direction === 'down' && skillsPlayed === false) {
-                $('.skill-holder').velocity("transition.slideUpIn");
+                $('.stos').velocity("transition.slideUpIn", { stagger: 500 });
                 skillsPlayed = true;
             }
         },
-        offset: '75%'
+        offset: '65%'
+    });
+
+    var pitchesPlayed = false;
+    var pitches = new Waypoint({
+        element: document.getElementById('pitch'),
+        handler: function(direction) {
+            if (direction === 'down' && pitchesPlayed === false) {
+                $('.pitches').velocity("transition.slideUpIn", { stagger: 500 });
+                pitchesPlayed = true;
+            }
+        },
+        offset: '65%'
     });
 
     // Swipe Carousel
-    var remote = $('#remote');
-    var special = $('#special');
-    var technical = $('#technical');
+    var preservation = $('#preservation');
+    var creation = $('#creation');
     window.mySwipe = new Swipe(document.getElementById('slider'),{
         continuous: false,
         callback: function(i,e){
@@ -379,79 +245,57 @@ $(function($) {
                 case 0:
                     $('.bullet-selected svg circle').velocity({fillOpacity: 0, r: '5px'}, 200);
                     $('.bullet-selected').removeClass('bullet-selected');
-                    remote.addClass('bullet-selected');
-                    $('#remote-bullet circle').velocity({fillOpacity: 1, r: '7px'}, 200);
-                    $('#divider-arrow-right').velocity({fillOpacity: 1}, 200);
-                    $('#divider-arrow-left').velocity({fillOpacity: 0}, 200);
+                    preservation.addClass('bullet-selected');
+                    $('#preservation-bullet circle').velocity({fillOpacity: 1, r: '7px'}, 200);
+                    //$('#divider-arrow-right').velocity({fillOpacity: 1}, 200);
+                    //$('#divider-arrow-left').velocity({fillOpacity: 0}, 200);
                     break;
                 case 1:
                     $('.bullet-selected svg circle').velocity({fillOpacity: 0, r: '5px'}, 200);
                     $('.bullet-selected').removeClass('bullet-selected');
-                    special.addClass('bullet-selected');
-                    $('#special-bullet circle').velocity({fillOpacity: 1, r: '7px'}, 200);
-                    $('#divider-arrow-right').velocity({fillOpacity: 1}, 200);
-                    $('#divider-arrow-left').velocity({fillOpacity: 1}, 200);
-                    break;
-                case 2:
-                    $('.bullet-selected svg circle').velocity({fillOpacity: 0,r: '5px'}, 200);
-                    $('.bullet-selected').removeClass('bullet-selected');
-                    technical.addClass('bullet-selected');
-                    $('#technical-bullet circle').velocity({fillOpacity: 1, r: '7px'}, 200);
-                    $('#divider-arrow-right').velocity({fillOpacity: 0}, 200);
-                    $('#divider-arrow-left').velocity({fillOpacity: 1}, 200);
+                    creation.addClass('bullet-selected');
+                    $('#creation-bullet circle').velocity({fillOpacity: 1, r: '7px'}, 200);
+                    //$('#divider-arrow-right').velocity({fillOpacity: 0}, 200);
+                    //$('#divider-arrow-left').velocity({fillOpacity: 1}, 200);
                     break;
                 default:
                     $('.bullet-selected svg circle').velocity({fillOpacity: 0, r: '5px'}, 200);
                     $('.bullet-selected').removeClass('bullet-selected');
-                    remote.addClass('bullet-selected');
-                    $('#remote-bullet circle').velocity({fillOpacity: 1, r: '7px'}, 200);
-                    $('#divider-arrow-right').velocity({fillOpacity: 1}, 200);
-                    $('#divider-arrow-left').velocity({fillOpacity: 0}, 200);
+                    preservation.addClass('bullet-selected');
+                    $('#preservation-bullet circle').velocity({fillOpacity: 1, r: '7px'}, 200);
+                    //$('#divider-arrow-right').velocity({fillOpacity: 1}, 200);
+                    //$('#divider-arrow-left').velocity({fillOpacity: 0}, 200);
             }
         }
     });
-    remote.on('click', function(){
+    preservation.on('click', function(){
         window.mySwipe.slide(0,500);
     });
-    special.on('click', function(){
+    creation.on('click', function(){
         window.mySwipe.slide(1,500);
     });
-    technical.on('click', function(){
-        window.mySwipe.slide(2,500);
-    });
-    remote.hover(
+    preservation.hover(
         function(){
-            if (!remote.hasClass('bullet-selected')){
-                $('#remote-bullet circle').velocity({r: '7px'}, 200);
+            if (!preservation.hasClass('bullet-selected')){
+                $('#preservation-bullet circle').velocity({r: '7px'}, 200);
             }
         },
         function(){
-            if (!remote.hasClass('bullet-selected')){
-                $('#remote-bullet circle').velocity({r: '5px'}, 200);
+            if (!preservation.hasClass('bullet-selected')){
+                $('#preservation-bullet circle').velocity({r: '5px'}, 200);
             }
         }
     );
-    special.hover(
+    creation.hover(
         function(){
-            if (!special.hasClass('bullet-selected')){
-                $('#special-bullet circle').velocity({r: '7px'}, 200);
+            if (!creation.hasClass('bullet-selected')){
+                console.log('ass!');
+                $('#creation-bullet circle').velocity({r: '7px'}, 200);
             }
         },
         function(){
-            if (!special.hasClass('bullet-selected')){
-                $('#special-bullet circle').velocity({r: '5px'}, 200);
-            }
-        }
-    );
-    technical.hover(
-        function(){
-            if (!technical.hasClass('bullet-selected')){
-                $('#technical-bullet circle').velocity({r: '7px'}, 200);
-            }
-        },
-        function(){
-            if (!technical.hasClass('bullet-selected')){
-                $('#technical-bullet circle').velocity({r: '5px'}, 200);
+            if (!creation.hasClass('bullet-selected')){
+                $('#creation-bullet circle').velocity({r: '5px'}, 200);
             }
         }
     );
